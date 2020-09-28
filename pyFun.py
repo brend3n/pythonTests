@@ -30,3 +30,36 @@
 # 	num = random.randint(1,1000)
 # 	counts += 1
 # print("That took: " + str(counts) + " iterations")
+class Node:
+	# def __init__(self, weight, left, right):
+	def __init__(self, weight):
+		self.weight = weight
+		self.next = None
+		# self.left = None
+		# self.right = None
+class LinkedList:
+	def __init__(self):
+		self.head = None
+
+	def insert_at_head(weight):
+		new_node = Node(weight)
+		new_node.next = self.head
+		self.head = new_node
+
+	def print_list(self):
+		print_node = self.head
+		while print_node is not None:
+			print(print_node.weight)
+			print_node = print_node.next
+
+
+list = LinkedList()
+list.head = Node(2)
+node1 = Node(24)
+node2 = Node(4)
+node3 = Node(69)
+list.head.next = node1
+node1.next = node2
+node2.next = node3
+
+list.print_list()
